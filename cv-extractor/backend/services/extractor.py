@@ -89,12 +89,11 @@ def extract_name(text: str) -> Dict[str, Optional[str]]:
     # Stratégie 1: Chercher "Prénom NOM" au tout début du texte (500 premiers caractères)
     text_start = text[:500]
     
-    # Pattern pour "Yann HOUNDJO" au début
     name_pattern = r'\b([A-ZÀÂÄÉÈÊËÏÎÔÙÛÜÇ][a-zàâäéèêëïîôùûüç]{2,})\s+([A-ZÀÂÄÉÈÊËÏÎÔÙÛÜÇ]{2,})\b'
     match = re.search(name_pattern, text_start)
     
     if match:
-        print(f"✅ Nom trouvé au début du texte: {match.group(1)} {match.group(2)}")
+        print(f" Nom trouvé au début du texte: {match.group(1)} {match.group(2)}")
         result["first_name"] = match.group(1)
         result["last_name"] = match.group(2).capitalize()
         return result
@@ -117,7 +116,7 @@ def extract_name(text: str) -> Dict[str, Optional[str]]:
         match = re.search(name_pattern1, cleaned_line)
         
         if match:
-            print(f"✅ Nom trouvé avec pattern 1: {match.group(1)} {match.group(2)}")
+            print(f" Nom trouvé avec pattern 1: {match.group(1)} {match.group(2)}")
             result["first_name"] = match.group(1)
             result["last_name"] = match.group(2)
             return result
@@ -126,12 +125,12 @@ def extract_name(text: str) -> Dict[str, Optional[str]]:
         match = re.search(name_pattern2, cleaned_line)
         
         if match:
-            print(f"✅ Nom trouvé avec pattern 2: {match.group(1)} {match.group(2)}")
+            print(f" Nom trouvé avec pattern 2: {match.group(1)} {match.group(2)}")
             result["first_name"] = match.group(1).capitalize()
             result["last_name"] = match.group(2).capitalize()
             return result
     
-    print("❌ Aucun nom trouvé")
+    print(" Aucun nom trouvé")
     return result
 
 
@@ -183,7 +182,7 @@ def extract_degree(text: str) -> Optional[str]:
                 found_degrees.append(degree)
     
     if found_degrees:
-        print(f"🎓 Diplômes trouvés: {found_degrees}")
+        print(f" Diplômes trouvés: {found_degrees}")
         return found_degrees[0]
     
     simple_patterns = [

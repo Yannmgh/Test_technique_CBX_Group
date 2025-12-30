@@ -137,9 +137,9 @@ async def upload_cv(file: UploadFile = File(...), db: Session = Depends(get_db))
         db.add(cv_entry)
         db.commit()
         db.refresh(cv_entry)
-        print(f"✅ CV sauvegardé en base de données (ID: {cv_entry.id})")
+        print(f" CV sauvegardé en base de données (ID: {cv_entry.id})")
     except Exception as e:
-        print(f"⚠️ Erreur lors de la sauvegarde en BDD : {str(e)}")
+        print(f" Erreur lors de la sauvegarde en BDD : {str(e)}")
     
     # 7. Retourne le résultat
     return CVResult(**cv_data)
