@@ -1,4 +1,4 @@
-# 📄 CV Extractor - Application d'Extraction Automatique de CV
+# CV Extractor - Application d'Extraction Automatique de CV
 
 Application full-stack Python permettant d'extraire automatiquement les informations d'un CV (PDF ou DOCX) sans utiliser d'IA. L'extraction se fait via des expressions régulières et du parsing de documents.
 
@@ -189,7 +189,7 @@ curl -X POST \
 
 Une fois le backend lancé, accédez à la documentation Swagger :
 
-👉 `http://localhost:8000/docs`
+ `http://localhost:8000/docs`
 
 ## Interface Utilisateur
 
@@ -226,11 +226,11 @@ L'extraction se fait **SANS IA**, uniquement avec :
 
 L'application gère différents formats de CV :
 
-✅ CV avec mise en page classique  
-✅ CV avec tableaux  
-✅ CV multilingues (français/anglais)  
-✅ CV avec espaces entre lettres  
-✅ Formats téléphone variés (+33, 06, espaces)  
+ CV avec mise en page classique  
+ CV avec tableaux  
+ CV multilingues (français/anglais)  
+ CV avec espaces entre lettres  
+ Formats téléphone variés (+33, 06, espaces)  
 
 ## Résolution des Problèmes
 
@@ -271,7 +271,7 @@ pip install -r requirements.txt
 python -m pytest tests/test_extractor.py -v
 ```
 
-## 📝 Améliorations Futures
+## Améliorations Futures
 
 - [ ] Support de plus de formats (TXT, ODT)
 - [ ] Extraction de plus d'informations (adresse, compétences)
@@ -282,7 +282,7 @@ python -m pytest tests/test_extractor.py -v
 - [ ] Multi-langue (interface en anglais)
 
 
-## 🙏 Remerciements
+## Remerciements
 
 Projet réalisé dans le cadre d'un exercice technique de développement Full Stack Python.
 
