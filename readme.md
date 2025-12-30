@@ -303,7 +303,7 @@ Une fois le backend lancé, accédez à la documentation Swagger :
 4. Utilisez le bouton  pour supprimer un CV
 5. Cliquez sur pour rafraîchir la liste
 
-## 🔍 Méthodologie d'Extraction
+## Méthodologie d'Extraction
 
 L'extraction se fait **SANS IA**, uniquement avec :
 
