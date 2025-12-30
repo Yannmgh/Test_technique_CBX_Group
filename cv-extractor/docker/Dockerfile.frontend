@@ -1,0 +1,24 @@
+# Image de base Python
+FROM python:3.11-slim
+
+# Définit le répertoire de travail
+WORKDIR /app
+
+# Copie le fichier requirements.txt
+COPY ../frontend/requirements.txt .
+
+# Installe les dépendances
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copie tout le code du frontend
+COPY ../frontend/ .
+
+# Expose le port 8501 (port par défaut de Streamlit)
+EXPOSE 8501
+
+# Configuration Streamlit pour éviter les problèmes en production
+RUN mkdir -p ~/.streamlit && \
+    echo "[server]\nheadless = true\nport = 8501\nenableCORS = false\n" > ~/.streamlit/config.toml
+
+# Commande pour lancer Streamlit
+CMD ["streamlit", "run", "app.py", "--server.address", "0.0.0.0"]
